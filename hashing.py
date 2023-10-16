@@ -1,15 +1,16 @@
 class HashMap:
     def __init__(self, initial_size=10):
-        # Inicialização do HashMap com um tamanho inicial
-        self.size = initial_size
-        # Inicialização do array para armazenar os dados
-        self.map = [None] * self.size
-        # Limite de fator de carga para acionar o redimensionamento
-        self.threshold = 0.7
+        self.size = initial_size # Inicialização do HashMap com um tamanho inicial
+        self.map = [None] * self.size # Inicialização do array para armazenar os dados
+        self.threshold = 0.7  # Limite de fator de carga para acionar o redimensionamento      
 
+
+    # Função hash simples para obter o índice com base na chave
     def _hash(self, key):
-        # Função hash simples para obter o índice com base na chave
-        return hash(key) % self.size
+        hash_value = 0
+        for char in str(key):
+            hash_value = (hash_value * 31 + ord(char)) % self.size
+        return hash_value   
 
     def _resize(self):
         # Redimensionamento da tabela hash para um tamanho maior (número primo próximo ao dobro)
@@ -19,6 +20,7 @@ class HashMap:
 
         # Criação de uma nova tabela hash
         new_map = [None] * new_size
+
         # Rehashing de todos os elementos da tabela anterior para a nova tabela
         for bucket in self.map:
             if bucket:
