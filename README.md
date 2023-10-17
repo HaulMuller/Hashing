@@ -44,7 +44,7 @@ Assim como em qualquer desenvolvimento de software, o projeto exigiu testes e de
 
 O objetivo do Sistema de Gerenciamento de Eventos é fornecer uma solução eficiente e útil, e o desenvolvimento do projeto também foi uma experiência divertida. A criação de uma solução que pode facilitar a organização de eventos e o acesso a informações sobre eles é uma recompensa por si só.
 
-# Relatório Técnico: Implementação de Listas Encadeadas no Jogo de Dominó
+# Relatório Técnico: Implementação do Sistema de Gerenciamento de Eventos com HashMap em Python
 
 ## Introdução
 
