@@ -52,32 +52,32 @@ Este relatório técnico descreve a estrutura de hash map utilizada na implement
 
 ## Classe HashMap
 
-- A classe HashMap é a base da implementação e fornece métodos para criar, redimensionar e gerenciar a tabela hash. Aqui estão os principais aspectos da implementação:
+A classe HashMap é a base da implementação e fornece métodos para criar, redimensionar e gerenciar a tabela hash. Aqui estão os principais aspectos da implementação:
 
-**Construtor e Inicialização:** O construtor permite que o usuário especifique um tamanho inicial para o HashMap. Ele inicializa o tamanho, a tabela hash e um limite de fator de carga.
+- Construtor e Inicialização: O construtor permite que o usuário especifique um tamanho inicial para o HashMap. Ele inicializa o tamanho, a tabela hash e um limite de fator de carga.
 
-**Função Hash:** A função _hash é responsável por calcular o índice com base na chave usando uma função de hash simples.
+- Função Hash: A função _hash é responsável por calcular o índice com base na chave usando uma função de hash simples.
 
-**Redimensionamento:** A função _resize redimensiona a tabela hash para um tamanho maior quando o fator de carga excede um limite. Ela também garante que o novo tamanho seja um número primo.
+- Redimensionamento: A função _resize redimensiona a tabela hash para um tamanho maior quando o fator de carga excede um limite. Ela também garante que o novo tamanho seja um número primo.
 
-**Métodos de Inserção e Remoção:** insert permite adicionar eventos ao HashMap. Se o fator de carga for excedido, a tabela é redimensionada. remove permite remover eventos com base na categoria e nome.
+- Métodos de Inserção e Remoção: insert permite adicionar eventos ao HashMap. Se o fator de carga for excedido, a tabela é redimensionada. remove permite remover eventos com base na categoria e nome.
 
-**Métodos de Busca:** search_category permite buscar eventos por categoria, e list_categories lista todas as categorias disponíveis. list_all_events lista todos os eventos.
+- Métodos de Busca: search_category permite buscar eventos por categoria, e list_categories lista todas as categorias disponíveis. list_all_events lista todos os eventos.
 
-**Fator de Carga:** A função load_factor calcula o fator de carga, o que ajuda a determinar quando redimensionar a tabela.
+- Fator de Carga: A função load_factor calcula o fator de carga, o que ajuda a determinar quando redimensionar a tabela.
 
 ## Funções Auxiliares
 
 Há também funções auxiliares que auxiliam na interação com o HashMap:
 
-**listar_categorias:** Lista todas as categorias disponíveis.
-**listar_eventos_na_categoria:** Lista eventos em uma categoria específica.
-**buscar_eventos_por_categoria:** Permite a busca de eventos por categoria.
-**remover_evento:** Permite a remoção de eventos.
+- listar_categorias: Lista todas as categorias disponíveis.
+- listar_eventos_na_categoria: Lista eventos em uma categoria específica.
+- buscar_eventos_por_categoria: Permite a busca de eventos por categoria.
+- remover_evento: Permite a remoção de eventos.
 
 ## Implementação da Aplicação
 
-- A aplicação main.py é a interface de usuário que permite interagir com o HashMap. Aqui estão os principais aspectos da implementação:
+A aplicação main.py é a interface de usuário que permite interagir com o HashMap. Aqui estão os principais aspectos da implementação:
 
 1. Menu Interativo: O programa exibe um menu interativo com opções para adicionar eventos, remover eventos, buscar eventos por categoria, listar todos os eventos, listar todas as categorias e sair.
 
